@@ -30,7 +30,8 @@ if "%input_source%"=="1" (
     git -C %DAILY_HOME%\ pull
     echo # %TODAY%>%DAILY_HOME%\%TODAY%.md
     echo %DAILY_HOME%\%TODAY%.md create success..
-    code -n %DAILY_HOME%
+    @REM open in vscode if necessary
+    @REM code -n %DAILY_HOME%
 ) else if "%input_source%"=="2" (
     git -C %DAILY_HOME%\ add .
     git -C %DAILY_HOME%\ commit -am "daily:)"
